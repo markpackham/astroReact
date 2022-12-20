@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Showcase from '../components/Showcase.jsx'
+// Just showing it's possile to use React & other frontend frameworks in Astro
+// import Showcase from '../components/Showcase.jsx'
+import Showcase from '../components/Showcase.astro'
 ---
 
 <Layout>
-	<Showcase />
+	<Showcase showExtra={true} />
 	<section class="page-content">
 		<div class="container">
 			<h2>Get Started With Astro</h2>
