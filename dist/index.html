@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Astro with React Crash Course</title>
+  <link rel="stylesheet" href="/assets/_slug_.4c144fcf.css" />
+<link rel="stylesheet" href="/assets/blog.62c572e9.css" />
+<link rel="stylesheet" href="/assets/index.05b3ddbe.css" />
+<link rel="stylesheet" href="/assets/index.f7f6b72e.css" /></head>
+  <body>
+    <header class="header astro-JPJKWML7">
+  <div class="container astro-JPJKWML7">
+    <div class="logo astro-JPJKWML7">
+      <a href="/" class="astro-JPJKWML7">
+        <img src="/assets/logo.6498442f.svg" alt="" class="astro-JPJKWML7">
+      </a>
+    </div>
+    <nav class="astro-JPJKWML7">
+      <ul class="astro-JPJKWML7">
+        <li class="astro-JPJKWML7"><a href="/" class="astro-JPJKWML7">Home</a></li>
+        <li class="astro-JPJKWML7"><a href="/about" class="astro-JPJKWML7">About</a></li>
+        <li class="astro-JPJKWML7"><a href="/blog" class="astro-JPJKWML7">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <section class="showcase astro-J2TCIOTV">
+  <div class="showcase-text astro-J2TCIOTV">
+    <h1 class="astro-J2TCIOTV">Welcome To The Astro Crash Course!</h1>
+    <p class="astro-J2TCIOTV">
+      Build super fast HTML-first websites using your favorite JavaScript frameworks
+    </p>
+  </div>
+
+  <div class="showcase-img astro-J2TCIOTV">
+    <img class="logos astro-J2TCIOTV" src="/assets/framework-logos.c0e34b5b.png" alt="logo">
+    <img class="logos-small astro-J2TCIOTV" src="/assets/framework-logos-small.ec62e422.png" alt="small logo">
+  </div><p class="showcase-demo astro-J2TCIOTV">
+    <small class="astro-J2TCIOTV">This is a demo website used for the YouTube crash course.</small>
+  </p><p class="showcase-demo astro-J2TCIOTV">
+    <small class="astro-J2TCIOTV">I won't show if showExta is "false" on the index page.</small>
+  </p>
+</section><section class="features astro-CJRIA5TL">
+  <div class="container astro-CJRIA5TL">
+   <!-- <div class="card">
+  <h3>{title}</h3>
+  <p>{body}</p>
+</div> --><div class="card false astro-AQ4R5732">
+  <h3 class="astro-CJRIA5TL">Zero JavaScript Runtime</h3><p class="astro-CJRIA5TL"> Astro renders HTML on the server and strips away any remaining, unused JavaScript.</p>
+</div><!-- <div class="card">
+  <h3>{title}</h3>
+  <p>{body}</p>
+</div> --><div class="card false astro-AQ4R5732">
+  <h3 class="astro-CJRIA5TL">The Power of Islands</h3><p class="astro-CJRIA5TL"> Need interactive UI? Load individual, non-blocking component islands in parallel.</p>
+</div><!-- <div class="card">
+  <h3>{title}</h3>
+  <p>{body}</p>
+</div> --><div class="card false astro-AQ4R5732">
+  <h3 class="astro-CJRIA5TL">Lazy-Loading Islands</h3><p class="astro-CJRIA5TL">Components only hydrate when they scroll into view. If you don&#39;t see it, Astro won&#39;t load it.</p>
+</div>
+  </div>
+</section><section class="page-content">
+		<div class="container">
+			<h2>Get Started With Astro</h2>
+			<p>
+				Get a new Astro project up and running locally with our helpful
+				create-astro CLI wizard!
+			</p>
+		
+			<div class="tabs astro-HAGYDRQS">
+  <ul class="tabs-header astro-HAGYDRQS">
+   <li class="astro-HAGYDRQS">NPM</li><li class="astro-HAGYDRQS">PNPM</li><li class="astro-HAGYDRQS">YARN</li>
+  </ul>
+  <ul class="tabs-content astro-HAGYDRQS">
+    <li class="tab astro-HAGYDRQS">$ npm create astro@latest</li><li class="tab astro-HAGYDRQS">$ pnpm create astro@latest</li><li class="tab astro-HAGYDRQS">$ yarn create astro</li>
+  </ul>
+</div>
+
+
+
+<script>(function(){const activeTextColor = "#A741FF";
+
+// This is vanilla JavaScript, Astro is cooler than React since you can just dump
+// vanilla JS in it without any issues
+  function createTabs(element) {
+    const header = element.querySelector('.tabs-header');
+    const content = element.querySelector('.tabs-content');
+    const tab_headers = [...header.children];
+    const tab_contents = [...content.children];
+    tab_contents.forEach((x) => (x.style.display = 'none'));
+    let current_tab_index = -1;
+
+    function setTab(index) {
+      if (current_tab_index > -1) {
+        tab_headers[current_tab_index].style.fontWeight = 400;
+        tab_headers[current_tab_index].style.color = '#fff';
+        tab_contents[current_tab_index].style.display = 'none';
+      }
+      tab_headers[index].style.fontWeight = 800;
+      // we get "activeTextColor" from define:vars={{activeTextColor}} in <script>
+      tab_headers[index].style.color = activeTextColor;
+      tab_contents[index].style.display = 'flex';
+      current_tab_index = index;
+    }
+
+    let default_tab_index = tab_headers.findIndex((x) => {
+      return [...x.classList].indexOf('default-tab') > -1;
+    });
+
+    default_tab_index = default_tab_index === -1 ? 0 : default_tab_index;
+    setTab(default_tab_index);
+    tab_headers.forEach((x, i) => (x.onclick = (event) => setTab(i)));
+  }
+
+  // Run
+  [...document.querySelectorAll('.tabs')].forEach((x) => createTabs(x));
+
+})();</script>
+			<h3>Start Building</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum
+				deserunt inventore ut voluptate, officia maiores repellat tenetur
+				praesentium omnis est ex tempora a necessitatibus reiciendis at et
+				dignissimos. Ipsam eius consequuntur cupiditate aperiam porro, esse
+				laborum impedit nesciunt ut voluptatum assumenda aspernatur libero
+				iusto error molestias dolorum, necessitatibus labore?
+			</p>
+		</div>
+	</section>
+    <footer class="footer astro-H5IDGJIG">
+    <div class="container astro-H5IDGJIG">
+      <div class="astro-H5IDGJIG">
+        <h3 class="astro-H5IDGJIG">Astro</h3>
+        <p class="astro-H5IDGJIG">
+          This is a demo website to show how the Astro framework works. Visit
+          the <a href="https://astro.build" class="astro-H5IDGJIG">official website</a> to learn
+          more.
+        </p>
+      </div>
+      <div class="astro-H5IDGJIG">
+        <h3 class="astro-H5IDGJIG">Links</h3>
+        <ul class="astro-H5IDGJIG">
+          <li class="astro-H5IDGJIG"><a href="/" class="astro-H5IDGJIG">Home</a></li>
+          <li class="astro-H5IDGJIG"><a href="/about" class="astro-H5IDGJIG">About</a></li>
+          <li class="astro-H5IDGJIG"><a href="/blog" class="astro-H5IDGJIG">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  </body></html>
